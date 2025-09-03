@@ -119,3 +119,12 @@
 | `hf_argparser.py` | 增强版 `argparse`，用于 CLI 工具定义 `TrainingArguments`。 |
 
 ## 总结：整体架构图
+Hugging Face Transformers
+│
+├── 模型 (modeling_.py)       → 架构实现（BERT, GPT, T5...）
+├── 分词器 (tokenization_.py) → 文本处理
+├── 图像/音频 (image_/audio_.py) → 多模态
+├── 训练 (trainer.py)          → 训练循环
+├── 配置 (configuration_.py)  → 模型参数
+├── 工具 (utils/*.py)          → 缓存、转换、跨框架
+└── 输出 (modeling_outputs.py) → 标准化返回值
